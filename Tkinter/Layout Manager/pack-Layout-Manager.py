@@ -1,4 +1,9 @@
 from tkinter import *
+from tkinter.messagebox import *
+
+def final(e):
+    showinfo('Confirmation box',"Order placed")
+
 win=Tk()
 
 
@@ -92,6 +97,8 @@ txt=Text(frame2,width=70,height=3)
 txt.pack(anchor=NW,pady=10,padx=25)
 
 submit=Button(frame2,text="Place Order",width=20,height=3)
+submit.bind('<Button-1>',final)
+
 submit.pack(anchor=CENTER,pady=30)
 
 
